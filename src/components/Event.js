@@ -1,25 +1,21 @@
 import { useState } from "react";
 
 const Event = ({ event }) => {
-    const [hidden, setHidden] = useState(true);
-
-    const toggleInfo = () => {
-        setHidden(!hidden);
-    };
-
+    const [showDetails, setShowDetails] = useState(false);
     return (
-        <li>
-            <h1 className="event-title">{event.summary}</h1>
-            <p className="event-date">{event.created}</p>
-            <p className="event-location">{event.location}</p>
-            {hidden && (<button onClick={toggleInfo}>show details</button>)}
-            {!hidden && (<>
-                <div>{event.description}</div>
-                <button onClick={toggleInfo}>hide details</button>
-            </>)}
-
+        <li className="event">
+            <h2>{event && event.summary}</h2>
+            <p>{event && event.location}</p>
+            <p>{event && (new Date(event.created)).toUTCString()}</p>
+            {showDetails ?
+                <p className="details">{event && event.description}</p> :
+                null
+            }
+            <button className="details-btn" onClick={() => {
+                showDetails ? setShowDetails(false) : setShowDetails(true)
+            }}>{showDetails ? "hide details" : "show details"}</button>
         </li>
-    );
+    )
 }
 
 export default Event;
