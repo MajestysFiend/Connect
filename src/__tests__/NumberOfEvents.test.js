@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 describe('<NumberOfEvents /> component', () => {
     let NumberOfEventsComponent;
     beforeEach(() => {
-        NumberOfEventsComponent = render(<NumberOfEvents />);
+        NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => { }} /> );
     });
 
     test('renders number of events text input', () => {
