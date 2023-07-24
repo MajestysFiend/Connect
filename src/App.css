@@ -65,17 +65,31 @@ p {
   margin: 5px 0;
 }
 
-input[type="text"],
-input[type="number"] {
-  padding: 8px 6px 8px 10px;
+input {
+  font-family: 'Bruno Ace SC', cursive;
+}
+
+#number-of-events-input {
+  width: 50px;
+}
+
+input[type="text"] {
+  width: 200px;
   border-radius: 4px;
   outline: none;
   border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 25px;
   font-size: 14px;
   line-height: 20px;
   align-self: center;
   height: 38px;
   margin-bottom: 20px;
+}
+
+label {
+  font-size: 20px;
+  color: rgb(200, 200, 200);
 }
 
 .city {
@@ -152,7 +166,7 @@ input[type="number"] {
   font-family: 'Roboto Slab', serif;
   font-size: 18px;
   font-weight: 700;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 15px;;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -202,6 +216,5 @@ input[type="number"] {
   .details-btn {
     position:relative;
   }
-
 
 }
