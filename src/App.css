@@ -23,9 +23,8 @@ button {
   background: none;
 }
 
-button:hover {
-  color: rgb(200, 200, 200);
-  scale: 1.05;
+ul {
+  padding: 0;
 }
 
 button::after {
@@ -134,6 +133,7 @@ input[type="number"] {
 }
 
 .details-btn {
+  color: rgb(200, 200, 200);
   position: absolute;
   margin-top: 10px;
   right: 10px;
@@ -160,4 +160,48 @@ input[type="number"] {
   padding-right: 40px;
   text-align: center;
   line-height: 1.6;
+}
+
+@media all and (max-width: 600px) {
+  body {
+    ::-webkit-scrollbar {
+        display: none;
+      }
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2{
+    font-size: 25px;
+  }
+
+  ul {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .location, .time {
+    font-size: 18px;
+  }
+
+  .event {
+    display: block;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .details {
+    font-size: 16px;
+    margin: auto;
+    max-width: 98%;
+    padding: 10px;
+  }
+
+  .details-btn {
+    position:relative;
+  }
+
+
 }
