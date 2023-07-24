@@ -16,7 +16,7 @@ h2 {
 }
 
 button {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Bruno Ace SC', cursive;
   font-size: 15px;
   font-weight: 600;
   border: none;
@@ -47,7 +47,7 @@ button:hover::after {
 
 .App {
   text-align: center;
-  padding: 2% 5%;
+  padding: 0 8%;
 }
 
 .App * {
