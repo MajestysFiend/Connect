@@ -17,7 +17,7 @@ class Alert extends Component {
             borderRadius: '7px',
             borderColor: this.color,
             textAlign: 'center',
-            fontSize: '12px',
+            fontSize: '16px',
             margin: '10px 0',
             padding: '10px'
         };
@@ -36,8 +36,16 @@ class InfoAlert extends Alert {
     constructor(props) {
         super(props);
         this.color = 'rgb(0,0,255)'
-        this.bgColor = 'rgb(220,220,255)'
+        this.bgColor = 'rgba(220,220,255, .9)'
     }
 }
 
-export {InfoAlert}
+class ErrorAlert extends Alert {
+    constructor(props) {
+        super(props);
+        this.color = 'rgb(255,0,0)'
+        this.bgColor = 'rgba(220,220,255, .9)'
+    }
+}
+
+export { InfoAlert, ErrorAlert }

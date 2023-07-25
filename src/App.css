@@ -144,6 +144,7 @@ label {
 
 .location, .time {
   font-size: 22px;
+  color: rgba(200, 200, 200, 0.9);
 }
 
 .details-btn {
@@ -162,7 +163,7 @@ label {
   max-width: 65%;
   margin: auto;
   margin-top: 30px;
-  border: 2px solid rgb(0, 0, 0);
+  border: 5px solid rgba(0, 0, 0, 0.2);
   font-family: 'Roboto Slab', serif;
   font-size: 18px;
   font-weight: 700;
