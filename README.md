@@ -1,4 +1,5 @@
 # Connect
+![connect](https://github.com/MajestysFiend/Connect/assets/94727522/e8e1e099-312e-4da2-92c7-eea6ff378f72)
 
 A serverless, progressive web application (PWA) built with React using a
 test-driven development (TDD) technique. Users will be able to search for
