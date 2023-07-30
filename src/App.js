@@ -27,8 +27,8 @@ const App = () => {
 
       if (filteredEvents !== undefined) {
         setEvents(filteredEvents.slice(0, currentNOE));
+        setAllLocations(extractLocations(allEvents));
       }
-      setAllLocations(extractLocations(allEvents));
     }
     
     if (navigator.onLine) {
