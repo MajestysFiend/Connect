@@ -24,7 +24,7 @@ const removeQuery = () => {
 const getToken = async (code) => {
     const encodeCode = encodeURIComponent(code);
     const response = await fetch(
-        "https://tubo2j0cc7.execute-api.us-east-1.amazonaws.com/dev/api/token" + '/' + encodeCode
+        "https://tubo2j0cc7.execute-api.us-east-1.amazonaws.com/dev/api/token/" + encodeCode
     );
     const { access_token } = await response.json();
     access_token && localStorage.setItem("access_token", access_token);
@@ -55,7 +55,7 @@ export const getEvents = async () => {
 
     if (token) {
         removeQuery();
-        const url = "https://tubo2j0cc7.execute-api.us-east-1.amazonaws.com/dev/api/get-events" + "/" + token;
+        const url = "https://tubo2j0cc7.execute-api.us-east-1.amazonaws.com/dev/api/get-events/" + token;
         const response = await fetch(url);
         const result = await response.json();
         if (result) {

@@ -15,7 +15,7 @@ const CityEventsChart = ({ allLocations, events }) => {
         };
 
         setData(getData());
-    }, [`${data, allLocations, events}`]);
+    }, [allLocations, events]);
 
     return (
         <ResponsiveContainer width="99%" height={400}>
