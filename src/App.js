@@ -52,9 +52,14 @@ const App = () => {
         {warningAlert ? <WarningAlert text={warningAlert} /> : null}
       </div>
       <motion.h1
-        initial={{opacity: 0, scale: 0}}
-        animate={{opacity: 1, scale: 1, rotate: 1440}}
-      transition={{duration: .75}}>Connect</motion.h1>
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+          rotate: 720
+        }}
+        transition={{ duration: .75 }}
+      >Connect</motion.h1>
       <CityEventsChart allLocations={allLocations} events={events} />
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} setInfoAlert={setInfoAlert} />
       <NumberOfEvents setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert} />
