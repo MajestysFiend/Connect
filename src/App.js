@@ -6,6 +6,7 @@ import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
 import './App.css';
 import { useState, useEffect } from 'react';
 import { extractLocations, getEvents } from './api';
+import { motion } from "framer-motion"
 
 const App = () => {
   const [events, setEvents] = useState([]);
@@ -16,7 +17,7 @@ const App = () => {
   const [errorAlert, setErrorAlert] = useState();
   const [warningAlert, setWarningAlert] = useState("");
 
-  
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,7 +32,7 @@ const App = () => {
     }
 
     let warningMessage;
-    
+
     if (navigator.onLine) {
       warningMessage = ""
     } else {
@@ -42,18 +43,23 @@ const App = () => {
   }, [currentCity, currentNOE]);
 
   return (
-    <div className="App">
+    <motion.div className="App"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}>
       <div className="alerts-container" setwarningalert={setWarningAlert}>
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
         {errorAlert ? <ErrorAlert text={errorAlert} /> : null}
         {warningAlert ? <WarningAlert text={warningAlert} /> : null}
       </div>
-      <h1>Connect</h1>
+      <motion.h1
+        initial={{opacity: 0, scale: 0}}
+        animate={{opacity: 1, scale: 1, rotate: 1440}}
+      transition={{duration: .75}}>Connect</motion.h1>
       <CityEventsChart allLocations={allLocations} events={events} />
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} setInfoAlert={setInfoAlert} />
       <NumberOfEvents setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert} />
       <EventList events={events} />
-    </div>
+    </motion.div>
   );
 }
 
