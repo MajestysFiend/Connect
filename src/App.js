@@ -16,20 +16,21 @@ const App = () => {
   const [errorAlert, setErrorAlert] = useState();
   const [warningAlert, setWarningAlert] = useState("");
 
-  useEffect(() => {
-    let warningMessage
+  
 
+  useEffect(() => {
     const fetchData = async () => {
       const allEvents = await getEvents();
       const filteredEvents = currentCity === "See all cities" ?
-        allEvents :
-        allEvents.filter(event => event.location === currentCity)
+        allEvents : allEvents.filter(event => event.location === currentCity);
 
       if (filteredEvents !== undefined) {
         setEvents(filteredEvents.slice(0, currentNOE));
         setAllLocations(extractLocations(allEvents));
       }
     }
+
+    let warningMessage;
     
     if (navigator.onLine) {
       warningMessage = ""
@@ -42,7 +43,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="alerts-container" setWarningAlert={setWarningAlert}>
+      <div className="alerts-container" setwarningalert={setWarningAlert}>
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
         {errorAlert ? <ErrorAlert text={errorAlert} /> : null}
         {warningAlert ? <WarningAlert text={warningAlert} /> : null}
