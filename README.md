@@ -7,7 +7,7 @@ upcoming events by city, and view event information. Cached information
 can even be viewed offline! The application uses the Google Calendar API 
 to fetch upcoming events.
 
-[Click here](https://majestysfiend.github.io/Connect/) to check it out!
+[Click here](https://Tristan-Lewis.github.io/Connect/) to check it out!
 
 ## Serverless Functionality 
 Using AWS Lambda, Connect will use OAuth consuming serverless functions to request access to 
